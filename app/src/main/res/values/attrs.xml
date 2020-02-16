@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+
+
+
+
+    <declare-styleable name="SupCircleImageView">
+        <attr name="suppic" format="reference" />
+        <attr name="isShow" format="boolean" />
+        <attr name="picSize" format="integer" />
+        <attr name="supPicSize" format="integer" />
+        <attr name="isGF" format="boolean" />
+        <attr name="isTutor" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MyGridLayout">
+        <attr name="numColumns" format="integer" />
+        <attr name="itemMargin" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="VideoLayout">
+        <attr name="row" format="integer" />
+        <attr name="column" format="integer" />
+    </declare-styleable>
+
+
+
+</resources>

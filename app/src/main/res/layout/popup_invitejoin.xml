@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_right"
+        android:layout_width="215mm"
+        android:layout_height="match_parent"
+        android:background="@color/color_2f2548"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_comfirm"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constaint_top"
+            android:layout_width="match_parent"
+            android:layout_height="124mm"
+            android:background="@color/color_019594"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_meet_theme_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12mm"
+                android:text="@string/str_meet_theme"
+                android:textColor="@color/color_19edf0"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_meet_id_title"/>
+
+            <TextView
+                android:id="@+id/tv_meet_theme_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64mm"
+                android:layout_marginRight="10mm"
+                android:text="测试title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_meet_theme_title"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_meet_id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_meet_id"
+                android:textColor="@color/color_19edf0"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintLeft_toLeftOf="@id/tv_meet_theme_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_meet_theme_title"
+                app:layout_constraintBottom_toTopOf="@id/tv_meet_psd"/>
+
+            <TextView
+                android:id="@+id/tv_meet_id_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111000111"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                android:layout_marginRight="10mm"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_meet_id_title"
+                app:layout_constraintLeft_toLeftOf="@id/tv_meet_theme_content" />
+
+            <TextView
+                android:id="@+id/tv_meet_psd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_19edf0"
+                android:textSize="@dimen/sp_10"
+                android:text="会议密码"
+                app:layout_constraintLeft_toLeftOf="@id/tv_meet_theme_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_meet_id_title"
+                app:layout_constraintBottom_toTopOf="@id/tv_meet_hour_title"/>
+
+            <TextView
+                android:id="@+id/tv_meet_psd_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231"
+                android:textSize="@dimen/sp_10"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/tv_meet_theme_content"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_meet_psd"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_meet_hour_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_meet_hour"
+                android:textColor="@color/color_19edf0"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintLeft_toLeftOf="@id/tv_meet_theme_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_meet_psd"
+                app:layout_constraintBottom_toTopOf="@id/divider"/>
+
+            <TextView
+                android:id="@+id/tv_meet_hour_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1小时"
+                android:textSize="@dimen/sp_10"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/tv_meet_theme_content"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_meet_hour_title"/>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5mm"
+                android:background="@color/color_1b0e3c"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_choose_part"/>
+
+            <TextView
+                android:id="@+id/tv_choose_part"
+                android:layout_width="wrap_content"
+                android:layout_height="35mm"
+                android:layout_marginLeft="12mm"
+                android:drawableRight="@drawable/icon_arrow_down"
+                android:drawableTint="@color/white"
+                android:gravity="center_vertical"
+                android:text="请选择"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                android:focusable="true"
+                android:background="@drawable/bg_item_selector_white_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="256mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constaint_top">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shape_c00ffff_w1"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8mm"
+                android:paddingTop="6mm"
+                android:paddingRight="10mm"
+                android:paddingBottom="6mm"
+                android:text="选中0人"
+                android:textColor="@color/color_00ffff"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toTopOf="@id/rcv_list"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_list"
+                android:layout_width="match_parent"
+                android:layout_height="227mm"
+                android:padding="1mm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_checked" />
+
+        </android.support.constraint.ConstraintLayout>
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_contair"
+                    android:layout_width="100mm"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/color_019594"
+                    android:descendantFocusability="afterDescendants"
+                    ></LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/btn_comfirm"
+        android:layout_width="75mm"
+        android:layout_height="28mm"
+        android:background="@drawable/bg_selector_popup_comfirm"
+        android:gravity="center"
+        android:text="确认邀请"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:nextFocusDown="@id/btn_cancel"
+        android:nextFocusLeft="@id/tv_choose_part"
+        app:layout_constraintLeft_toRightOf="@id/constraint_right"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="75mm"
+        android:layout_height="28mm"
+        android:background="@drawable/bg_selector_popup_cancel"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:nextFocusDown="@id/btn_cancel"
+        android:nextFocusLeft="@id/tv_choose_part"
+        app:layout_constraintLeft_toLeftOf="@id/btn_comfirm"
+        app:layout_constraintRight_toRightOf="@id/btn_comfirm"
+        app:layout_constraintTop_toBottomOf="@id/btn_comfirm" />
+
+</android.support.constraint.ConstraintLayout>

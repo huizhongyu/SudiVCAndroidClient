@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35mm"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_ac"
+        android:layout_width="200mm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/color_selector_devicepop"
+        android:textSize="11sp"
+        android:background="@drawable/bg_selector_top_item"
+        android:focusable="true"
+        android:gravity="center"/>
+</android.support.constraint.ConstraintLayout>

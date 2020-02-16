@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_2F2E34"
+    tools:context="cn.closeli.rtc.VideoConferenceActivity">
+
+
+    <LinearLayout
+        android:id="@+id/local_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <!--bot bar-->
+    <cn.closeli.rtc.widget.VideoController
+        android:id="@+id/video_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </cn.closeli.rtc.widget.VideoController>
+
+    <FrameLayout
+        android:id="@+id/all_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_narrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="10mm"
+            android:layout_marginRight="10mm"
+            android:background="#80000000"
+            android:focusable="true"
+            android:onClick="resetScreen"
+            android:padding="10mm"
+            android:src="@drawable/icon_scale_small"
+            android:visibility="gone" />
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

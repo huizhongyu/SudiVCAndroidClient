@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="480mm"
+    android:layout_height="match_parent"
+    android:background="@color/color_3a3550"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/btn_comfirm"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:text="保存"
+        android:textSize="11sp"
+        android:textColor="@color/color_selector_setting_save"
+        android:layout_marginTop="35mm"
+        android:layout_marginRight="30mm"
+        android:background="@drawable/bg_selector_btn_setting_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_server_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30mm"
+        android:text="@string/str_setting_title_server_all"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_comfirm"
+        app:layout_constraintBottom_toTopOf="@id/btn_comfirm"/>
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="225mm"
+        android:layout_marginTop="40mm"
+        android:textColorHint="@color/white"
+        android:textSize="11sp"
+        android:paddingLeft="24mm"
+        android:paddingRight="24mm"
+        android:inputType="textWebEditText"
+        android:hint="@string/please_input_server_address"
+        android:background="@drawable/bg_selector_server_focus"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_server_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_server_title"
+        android:textColor="@color/white"
+        android:layout_height="33mm" />
+
+    <EditText
+        android:id="@+id/et_port"
+        android:layout_width="225mm"
+        android:layout_height="33mm"
+        android:layout_marginTop="12mm"
+        android:background="@drawable/bg_selector_server_focus"
+        android:inputType="number"
+        android:hint="@string/please_input_server_port"
+        android:paddingLeft="24mm"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="11sp"
+        android:maxLength="5"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_server_title"
+        app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+
+
+</android.support.constraint.ConstraintLayout>

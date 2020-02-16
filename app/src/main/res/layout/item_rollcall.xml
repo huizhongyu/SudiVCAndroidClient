@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraint_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:background="@drawable/bg_selector_contact_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.Guideline
+        android:id="@+id/guide"
+        android:layout_width="0.5mm"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="229mm"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="25mm"
+        android:layout_height="25mm"
+        android:layout_marginTop="6mm"
+        android:layout_marginBottom="6mm"
+        android:layout_marginLeft="28mm"
+        android:src="@drawable/icon_device_online"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_nameinfo"
+        android:layout_width="0mm"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8mm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:text="张三"
+        android:layout_marginTop="4mm"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        />
+
+    <TextView
+        android:id="@+id/tv_post"
+        android:layout_width="0mm"
+        android:layout_height="wrap_content"
+        android:text="(开发)北京开发部"
+        android:textSize="@dimen/sp_10"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tv_nameinfo"
+        app:layout_constraintLeft_toLeftOf="@id/tv_nameinfo"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        />
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="15mm"
+        android:layout_height="15mm"
+        android:src="@drawable/icon_item_handup"
+        android:layout_marginRight="20mm"
+        android:layout_marginTop="3mm"
+        android:layout_marginBottom="3mm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5mm"
+        android:background="@color/color_666b7d"
+        android:layout_marginLeft="28mm"
+        android:layout_marginRight="16mm"
+        android:layout_marginBottom="0.5mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>

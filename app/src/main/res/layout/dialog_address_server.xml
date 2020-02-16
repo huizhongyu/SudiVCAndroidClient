@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="305mm"
+        android:layout_height="match_parent"
+
+        android:background="@color/color_1B0D3B">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40mm"
+            android:layout_marginTop="36mm"
+            android:text="配置服务器"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="225mm"
+            android:layout_marginTop="37mm"
+            android:textColorHint="@color/white"
+            android:textSize="11sp"
+            android:paddingLeft="24mm"
+            android:paddingRight="24mm"
+            android:inputType="textWebEditText"
+            android:hint="@string/please_input_server_address"
+            android:background="@drawable/bg_login_server"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:textColor="@color/white"
+            android:layout_height="33mm" />
+
+        <EditText
+            android:id="@+id/et_port"
+            android:layout_width="225mm"
+            android:layout_height="33mm"
+            android:layout_marginTop="37mm"
+            android:background="@drawable/bg_login_server"
+            android:inputType="number"
+            android:hint="@string/please_input_server_port"
+            android:paddingLeft="24mm"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="11sp"
+            android:maxLength="5"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+        <TextView
+            android:id="@+id/tv_comfirm"
+            android:layout_width="90mm"
+            android:layout_height="34mm"
+            android:background="@drawable/bg_selector_popup_comfirm"
+            android:gravity="center"
+            android:text="@string/tv_save"
+            android:textColor="@color/white"
+            android:focusable="true"
+            android:textSize="12sp"
+            android:layout_marginTop="40mm"
+            android:layout_marginLeft="@dimen/dimens_50mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_port" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="90mm"
+            android:layout_height="34mm"
+            android:layout_marginLeft="25mm"
+            android:textSize="12sp"
+            android:background="@drawable/bg_dialog_cancel"
+            android:gravity="center"
+            android:text="@string/tv_login_cancel"
+            android:textColor="@color/white"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="@+id/tv_comfirm"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_comfirm"
+            app:layout_constraintLeft_toRightOf="@+id/tv_comfirm" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

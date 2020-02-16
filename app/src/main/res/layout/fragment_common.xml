@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_common_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_setting_title_common"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="30mm"
+        android:layout_marginTop="40mm"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="Currency"
+        android:layout_marginLeft="10mm"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/tv_common_title"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_common_title"/>
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:text="@string/str_sava"
+        android:textColor="@color/color_selector_setting_save"
+        android:background="@drawable/bg_selector_btn_setting_save"
+        android:textSize="11sp"
+        android:layout_marginTop="35mm"
+        android:layout_marginRight="30mm"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_common_title_version"
+        style="@style/style_text_item_setting"
+        android:text="软件版本"
+        android:layout_marginTop="@dimen/dimens_20mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_common_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="1.0"
+        android:textSize="11sp"
+        android:layout_marginLeft="108mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_common_title_version"
+        />
+
+    <TextView
+        android:id="@+id/tv_common_title_reset"
+        style="@style/style_text_item_setting"
+        android:text="系统还原"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_version"
+        />
+
+    <Button
+        android:id="@+id/btn_common_reset"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:text="恢复出厂设置"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_selector_setting_btn"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_reset"
+        app:layout_constraintBottom_toTopOf="@id/tv_common_title_reset"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_common_title_commit"
+        style="@style/style_text_item_setting"
+        android:text="日志提取"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_reset"
+        />
+
+    <Button
+        android:id="@+id/btn_common_commit"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:text="提取"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_selector_setting_btn"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_commit"
+        app:layout_constraintBottom_toTopOf="@id/tv_common_title_commit"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_common_title_display"
+        style="@style/style_text_item_setting"
+        android:text="显示"
+        android:layout_marginTop="5mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_commit"
+        />
+
+    <TextView
+        android:id="@+id/tv_common_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:text="1920*1080 30帧"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_version"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_common_title_display"/>
+
+
+    <TextView
+        android:id="@+id/tv_common_title_angle"
+        android:text="摄像头角度"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_display"
+        />
+
+    <CheckBox
+        android:id="@+id/cb_setting_angle"
+        android:layout_width="73mm"
+        android:layout_height="0mm"
+        android:text="倒置"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:button="@null"
+        android:gravity="center"
+        android:background="@drawable/bg_selector_contact_item"
+        android:drawableRight="@drawable/bg_selector_setting_cb"
+        android:paddingRight="@dimen/dimens_13mm"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        app:layout_constraintTop_toTopOf="@id/tv_common_title_angle"
+        app:layout_constraintBottom_toBottomOf="@id/tv_common_title_angle"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_version"
+        />
+
+    <TextView
+        android:id="@+id/tv_common_title_focus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="摄像头聚焦"
+        android:textSize="11sp"
+        android:textColor="@color/color_687df4"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/tv_common_title_angle"
+        app:layout_constraintTop_toBottomOf="@id/rg_setting_focus"
+        app:layout_constraintBottom_toTopOf="@id/rg_setting_focus"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_setting_focus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6mm"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/cb_setting_angle"
+        app:layout_constraintTop_toBottomOf="@id/cb_setting_angle">
+
+        <RadioButton
+            android:id="@+id/rb_setting_focus_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="5mm"
+            android:text="自动"
+            android:textSize="11sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_setting_focus_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20mm"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="5mm"
+            android:text="手动"
+            android:textColor="@color/white"
+            android:textSize="11sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_setting_title_second"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        android:text="辅流显示"
+        app:layout_constraintTop_toBottomOf="@id/tv_common_title_angle"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version" />
+
+    <RadioGroup
+        android:id="@+id/rg_setting_second_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="0mm"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_version"
+        app:layout_constraintTop_toTopOf="@id/tv_setting_title_second"
+        app:layout_constraintBottom_toBottomOf="@id/tv_setting_title_second">
+
+        <RadioButton
+            android:id="@+id/rb_setting_second_main"
+            android:layout_width="68mm"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector_contact_item"
+            android:button="@null"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:paddingLeft="13mm"
+            android:paddingRight="13mm"
+            android:text="主屏"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:checked="true"
+            android:focusable="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_setting_second_sub"
+            android:layout_width="68mm"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector_contact_item"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20mm"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:paddingLeft="13mm"
+            android:paddingRight="13mm"
+            android:focusable="true"
+            android:text="辅屏"
+            android:textColor="@color/white"
+            android:textSize="11sp"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tv_setting_title_config"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        android:text="图像参数"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_setting_title_second"
+        />
+
+<Button
+    android:id="@+id/btn_setting_image_config"
+    android:layout_width="90mm"
+    android:layout_height="34mm"
+    android:text="图像参数"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_11"
+    android:background="@drawable/bg_selector_setting_btn"
+    app:layout_constraintTop_toBottomOf="@id/tv_setting_title_config"
+    app:layout_constraintBottom_toTopOf="@id/tv_setting_title_config"
+    app:layout_constraintLeft_toLeftOf="@id/tv_common_version"
+    />
+
+
+    <TextView
+        android:id="@+id/tv_setting_title_input"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        android:text="音频输入"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_setting_title_config"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_audio_in"
+        android:layout_width="wrap_content"
+        android:layout_height="0mm"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        app:layout_constraintTop_toTopOf="@id/tv_setting_title_input"
+        app:layout_constraintBottom_toBottomOf="@id/tv_setting_title_input"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_version">
+        <RadioButton
+            android:id="@+id/rv_audio_in_linein"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:text="Line in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+
+        <RadioButton
+            android:id="@+id/rv_audio_in_usb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:layout_marginLeft="20mm"
+            android:text="USB"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+
+        <RadioButton
+            android:id="@+id/rv_audio_in_mic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:layout_marginLeft="20mm"
+            android:text="Mic in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_setting_title_output"
+        android:text="音频输出"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        app:layout_constraintLeft_toLeftOf="@id/tv_common_title_version"
+        app:layout_constraintTop_toBottomOf="@id/tv_setting_title_input"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_audio_out"
+        android:layout_width="wrap_content"
+        android:layout_height="0mm"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        app:layout_constraintTop_toTopOf="@id/tv_setting_title_output"
+        app:layout_constraintBottom_toBottomOf="@id/tv_setting_title_output"
+        app:layout_constraintLeft_toLeftOf="@id/rg_audio_in">
+        <RadioButton
+            android:id="@+id/rv_audio_out_hdmi1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:text="HDMI1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+
+        <RadioButton
+            android:id="@+id/rv_audio_out_hdmi2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:layout_marginLeft="20mm"
+            android:text="HDMI2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+
+        <RadioButton
+            android:id="@+id/rv_audio_out_lineout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:layout_marginLeft="20mm"
+            android:text="Line out"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+
+        <RadioButton
+            android:id="@+id/rv_audio_out_usb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/bg_selector_contact_item"
+            android:paddingLeft="22mm"
+            android:paddingRight="22mm"
+            android:gravity="center"
+            android:drawableLeft="@drawable/bg_selector_setting_rb"
+            android:drawablePadding="@dimen/dimens_5mm"
+            android:layout_marginLeft="20mm"
+            android:text="USB"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            />
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>

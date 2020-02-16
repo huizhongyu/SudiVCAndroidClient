@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/color_CC0A0026"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dimens_10mm"
+        android:layout_marginTop="@dimen/dimens_70mm"
+        android:paddingEnd="@dimen/dimens_20mm">
+
+        <TextView
+            android:id="@+id/layout"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/layouts"
+            android:layout_marginEnd="@dimen/dimens_6mm"
+            android:text="@string/meeting_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_11mm" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/layouts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimens_20mm"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/dimens_40mm" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="0.5mm"
+        android:layout_height="match_parent"
+        android:background="@color/color_666B7D" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimens_100mm">
+
+        <TextView
+            android:focusable="true"
+            android:id="@+id/restore_default"
+            android:layout_width="@dimen/dimens_90mm"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_15mm"
+            android:background="@drawable/bg_selector_c687df4_lc00ffff"
+            android:gravity="center"
+            android:paddingTop="@dimen/dimens_10mm"
+            android:paddingBottom="@dimen/dimens_10mm"
+            android:text="@string/str_layout_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_15mm"
+            android:background="@drawable/selector_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimens_20mm"
+            android:paddingTop="@dimen/dimens_15mm"
+            android:paddingRight="@dimen/dimens_20mm"
+            android:paddingBottom="@dimen/dimens_15mm"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_12mm"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!--    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--        android:layout_width="272mm"-->
+    <!--        android:layout_height="191mm"-->
+    <!--        android:background="@drawable/maininterface_sidebaer_icon_layout_bg"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/sb_top"-->
+    <!--            android:layout_width="84mm"-->
+    <!--            android:layout_height="24mm"-->
+    <!--            android:layout_marginLeft="30mm"-->
+    <!--            android:layout_marginTop="24mm"-->
+    <!--            android:focusable="true"-->
+    <!--            android:gravity="center"-->
+    <!--            android:background="@drawable/bg_selector_r12_btn"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            android:text="恢复默认布局"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="8sp" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/layout_one"-->
+    <!--            android:layout_width="90mm"-->
+    <!--            android:layout_height="40mm"-->
+    <!--            android:layout_marginLeft="30mm"-->
+    <!--            android:layout_marginTop="17mm"-->
+    <!--            android:focusable="true"-->
+    <!--            android:padding="1mm"-->
+    <!--            android:src="@drawable/maininterface_sidebaer_icon_layout_four"-->
+    <!--            android:background="@drawable/bg_selector_layout_one"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/sb_top" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/layout_two"-->
+    <!--            android:layout_width="90mm"-->
+    <!--            android:layout_height="40mm"-->
+    <!--            android:layout_marginLeft="30mm"-->
+    <!--            android:focusable="true"-->
+    <!--            android:padding="1mm"-->
+    <!--            android:src="@drawable/maininterface_sidebaer_icon_layout_six"-->
+    <!--            android:background="@drawable/bg_selector_layout_one"-->
+    <!--            app:layout_constraintLeft_toRightOf="@+id/layout_one"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/layout_one" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/layout_three"-->
+    <!--            android:layout_width="90mm"-->
+    <!--            android:layout_height="40mm"-->
+    <!--            android:focusable="true"-->
+    <!--            android:layout_marginLeft="30mm"-->
+    <!--            android:layout_marginTop="15mm"-->
+    <!--            android:padding="1mm"-->
+    <!--            android:src="@drawable/maininterface_sidebaer_icon_layout_nine"-->
+    <!--            android:background="@drawable/bg_selector_layout_one"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/layout_one" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/layout_four"-->
+    <!--            android:layout_width="90mm"-->
+    <!--            android:layout_height="40mm"-->
+    <!--            android:layout_marginLeft="30mm"-->
+    <!--            android:focusable="true"-->
+    <!--            android:padding="1mm"-->
+    <!--            android:src="@drawable/maininterface_sidebaer_icon_layout_twe"-->
+    <!--            android:background="@drawable/bg_selector_layout_one"-->
+    <!--            app:layout_constraintLeft_toRightOf="@+id/layout_three"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/layout_three" />-->
+    <!--    </android.support.constraint.ConstraintLayout>-->
+</LinearLayout>

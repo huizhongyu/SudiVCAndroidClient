@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ll_join_micro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_50mm"
+        android:drawableTop="@drawable/maininterface_icon_lock_open"
+        android:focusable="true"
+        android:text="@string/manage_all_mic"
+        android:textColor="@color/selector_video_set_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ll_join_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_50mm"
+        android:drawableTop="@drawable/maininterface_icon_lock_open"
+        android:focusable="true"
+        android:text="@string/manage_all_share"
+        android:textColor="@color/selector_video_set_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_join_micro" />
+
+    <LinearLayout
+        android:id="@+id/ll_join_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_selector_meet_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:paddingLeft="16mm"
+        android:paddingTop="8mm"
+        android:paddingRight="16mm"
+        android:paddingBottom="8mm"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_setting_join_camera"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tv_camera_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2mm"
+            android:layout_marginRight="2mm"
+            android:text="全体开启"
+            android:textColor="@color/color_19EDF0"
+            android:textSize="@dimen/sp_10" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_right_arrow" />
+
+    </LinearLayout>
+
+    <!--    <View-->
+    <!--        android:id="@+id/line_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1mm"-->
+    <!--        android:layout_marginLeft="10mm"-->
+    <!--        android:layout_marginRight="10mm"-->
+    <!--        android:background="@color/color_19EDF0"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/ll_join_camera" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/ll_join_micro"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/bg_selector_meet_item"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingLeft="16mm"-->
+    <!--        android:paddingTop="8mm"-->
+    <!--        android:paddingRight="16mm"-->
+    <!--        android:paddingBottom="8mm"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/line_1">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="@string/str_setting_join_micro"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/sp_10" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_micro_state"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="2mm"-->
+    <!--            android:layout_marginRight="2mm"-->
+    <!--            android:text="全体开启"-->
+    <!--            android:textColor="@color/color_19EDF0"-->
+    <!--            android:textSize="@dimen/sp_10" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:src="@drawable/icon_right_arrow" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <View-->
+    <!--        android:id="@+id/line_2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1mm"-->
+    <!--        android:layout_marginLeft="10mm"-->
+    <!--        android:layout_marginRight="10mm"-->
+    <!--        android:background="@color/color_19EDF0"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/ll_join_micro" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/ll_join_share"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/bg_selector_meet_item"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingLeft="16mm"-->
+    <!--        android:paddingTop="8mm"-->
+    <!--        android:paddingRight="16mm"-->
+    <!--        android:paddingBottom="8mm"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/line_2">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="@string/str_setting_join_share"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/sp_10" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_share_state"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="2mm"-->
+    <!--            android:layout_marginRight="2mm"-->
+    <!--            android:text="全体开启"-->
+    <!--            android:textColor="@color/color_19EDF0"-->
+    <!--            android:textSize="@dimen/sp_10" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:src="@drawable/icon_right_arrow" />-->
+
+    <!--    </LinearLayout>-->
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="10mm"
+        android:layout_marginRight="10mm"
+        android:background="@color/color_19EDF0"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_join_share" />
+
+    <LinearLayout
+        android:id="@+id/ll_join_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_selector_meet_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:paddingLeft="16mm"
+        android:paddingTop="8mm"
+        android:paddingRight="16mm"
+        android:paddingBottom="8mm"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_setting_join_record"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tv_record_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2mm"
+            android:layout_marginRight="2mm"
+            android:text="全体开启"
+            android:textColor="@color/color_19EDF0"
+            android:textSize="@dimen/sp_10" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_right_arrow" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

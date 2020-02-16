@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="79mm"
+        android:layout_height="200mm"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingBottom="5mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_loginout"
+            android:layout_width="match_parent"
+            android:layout_height="34mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_item_devicepop"
+            android:drawableLeft="@drawable/bg_selector_logout"
+            android:paddingLeft="8mm"
+            android:paddingRight="12mm"
+            android:text="注销"
+            android:textSize="11sp"
+            android:textColor="@color/color_selector_devicepop"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_shutdown"
+            android:layout_width="match_parent"
+            android:layout_height="34mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_item_devicepop"
+            android:drawableLeft="@drawable/bg_selector_shutdown"
+            android:paddingLeft="8mm"
+            android:paddingRight="12mm"
+            android:text="关机"
+            android:textSize="11sp"
+            android:textColor="@color/color_selector_devicepop"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_sleep"
+            android:layout_width="match_parent"
+            android:layout_height="34mm"
+            android:layout_marginTop="2mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_item_devicepop"
+            android:drawableLeft="@drawable/bg_selector_bewait"
+            android:paddingLeft="8mm"
+            android:paddingRight="12mm"
+            android:text="待机"
+            android:textSize="11sp"
+            android:textColor="@color/color_selector_devicepop"
+            />
+
+        <TextView
+            android:id="@+id/tv_reboot"
+            android:layout_width="match_parent"
+            android:layout_height="34mm"
+            android:layout_marginTop="2mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_item_devicepop"
+            android:drawableLeft="@drawable/bg_selector_reboot"
+            android:paddingLeft="8mm"
+            android:paddingRight="12mm"
+            android:text="重启"
+            android:textSize="11sp"
+            android:textColor="@color/color_selector_devicepop"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="34mm"
+            android:layout_marginTop="2mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_item_devicepop"
+            android:drawableLeft="@drawable/bg_selector_cancel"
+            android:paddingLeft="8mm"
+            android:paddingRight="12mm"
+            android:visibility="gone"
+            android:text="取消"
+            android:textSize="11sp"
+            android:textColor="@color/color_selector_devicepop"
+            />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

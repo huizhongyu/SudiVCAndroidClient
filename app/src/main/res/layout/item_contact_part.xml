@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraint_part_root"
+    android:layout_width="match_parent"
+    android:layout_height="30mm"
+    android:focusable="true"
+    android:background="@drawable/bg_selector_item_contact"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/iv_icon_part"
+        android:layout_width="15mm"
+        android:layout_height="15mm"
+        android:src="@drawable/icon_item_part"
+        android:layout_marginLeft="60mm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8mm"
+        android:text="test"
+        android:textColor="@color/color_0A0026"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon_part"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_arrow_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15mm"
+        android:src="@drawable/icon_arrow_right_contact"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <View
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0.5mm"
+        android:background="@color/color_cac0dd"
+        />
+</android.support.constraint.ConstraintLayout>

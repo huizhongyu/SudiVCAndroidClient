@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:drawable="@drawable/bg_shape_r15_c80000000_w3_lc19edf0"/>
+    <item android:state_focused="false" android:drawable="@drawable/bg_shape_r15_c80000000_w1_lc019594"/>
+    <item android:drawable="@drawable/bg_shape_r15_c80000000_w1_lc019594"/>
+</selector>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_0A0026"
+    android:padding="@dimen/dimens_30mm">
+
+    <TextView
+        android:id="@+id/currentMeeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前会议：2020年全年计划"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_11mm" />
+
+    <TextView
+        android:id="@+id/meetingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        android:text="会议ID：GEEDOW-sdkj1213"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_11mm" />
+
+    <TextView
+        android:id="@+id/meetingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        android:text="会议时长：3小时"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_11mm" />
+
+    <TextView
+        android:id="@+id/meetingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_3mm"
+        android:text="会议会场：杭州速递科技会场"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_11mm" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/members"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimens_12mm" />
+
+</LinearLayout>

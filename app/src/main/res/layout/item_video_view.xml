@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/extra_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/state_not_connect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/info_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:background="@drawable/shape_video_item"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimens_10mm"
+            android:paddingTop="@dimen/dimens_5mm"
+            android:paddingBottom="@dimen/dimens_5mm">
+
+            <TextView
+                android:id="@+id/meeting_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="10mm"
+                tools:text="文星街道星洲社区" />
+
+            <ImageView
+                android:id="@+id/mic"
+                android:layout_width="@dimen/dimens_12mm"
+                android:layout_height="@dimen/dimens_12mm"
+                android:layout_marginLeft="@dimen/dimens_5mm"
+                android:layout_marginRight="@dimen/dimens_6mm" />
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="@dimen/dimens_12mm"
+                android:layout_height="@dimen/dimens_12mm"
+                android:layout_marginRight="@dimen/dimens_10mm" />
+
+        </LinearLayout>
+
+        <top.androidman.SuperButton
+            android:id="@+id/role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/dimens_5mm"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimens_5mm"
+            android:paddingTop="@dimen/dimens_3mm"
+            android:paddingRight="@dimen/dimens_5mm"
+            android:paddingBottom="@dimen/dimens_3mm"
+            android:visibility="visible"
+            app:color_normal="@color/color_FF9800"
+            app:corner="@dimen/dimens_100mm"
+            app:text="发言中"
+            app:textColor="@color/white"
+            app:textSize="8sp" />
+
+        <top.androidman.SuperButton
+            android:id="@+id/me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="@dimen/dimens_5mm"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimens_5mm"
+            android:paddingTop="@dimen/dimens_3mm"
+            android:paddingRight="@dimen/dimens_5mm"
+            android:paddingBottom="@dimen/dimens_3mm"
+            app:color_normal="@color/color_990A0026"
+            app:corner="@dimen/dimens_100mm"
+            app:text="我"
+            app:textColor="@color/white"
+            app:textSize="8sp" />
+
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/bound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_666B7D"
+        android:visibility="gone" />
+    <!--        android:background="@drawable/bg_item_selector_white_line"-->
+
+</merge>

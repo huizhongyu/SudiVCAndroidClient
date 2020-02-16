@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_host_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_selector_meet_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="8mm"
+        android:paddingBottom="8mm"
+        android:paddingLeft="16mm"
+        android:paddingRight="16mm"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <TextView
+            android:id="@+id/tv_first_content"
+            android:layout_width="0mm"
+            android:layout_height="wrap_content"
+            android:text="@string/str_setting_host_change"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            />
+        
+        <ImageView
+            android:id="@+id/iv_first_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_right_arrow"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

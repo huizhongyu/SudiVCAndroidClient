@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_1c0e3c">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guild_line_first"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="320dp" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guild_line_second"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="320dp" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/color_19edf0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dev_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/str_dev_meet_set_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_room_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/str_dev_set_roomname"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/et_room_name"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/et_room_name"
+        app:layout_constraintTop_toTopOf="@id/et_room_name" />
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_room_name"-->
+<!--        android:layout_width="188dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginLeft="12dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:focusable="true"-->
+<!--        android:background="@drawable/shape_login_edit"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/guild_line_first"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_dev_title">-->
+
+
+        <EditText
+            android:id="@+id/et_room_name"
+            android:layout_width="188dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_selector_et_login"
+            android:maxLength="15"
+            android:hint="请输入会议室名称"
+            android:inputType="text"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            android:nextFocusDown="@id/spinner_person"
+            app:layout_constraintRight_toLeftOf="@id/guild_line_first"
+            app:layout_constraintTop_toBottomOf="@id/tv_dev_title"/>
+
+<!--    </RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/tv_meeting_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dev_set_num"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/rl_meet_num"
+        app:layout_constraintLeft_toLeftOf="@id/tv_room_title"
+        app:layout_constraintTop_toTopOf="@id/rl_meet_num" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/rl_meet_num"
+        android:layout_width="188dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/shape_login_edit"
+        app:layout_constraintLeft_toLeftOf="@id/et_room_name"
+        app:layout_constraintRight_toRightOf="@id/et_room_name"
+        app:layout_constraintTop_toBottomOf="@id/et_room_name">
+        <TextView
+            android:id="@+id/tv_meet_nume"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16mm"
+            android:textColor="@color/color_5b5b70"
+            android:text="选择会议人数"
+            android:textSize="@dimen/sp_12"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_spinner_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16人"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:focusable="true"
+            android:layout_marginRight="2mm"
+            app:layout_constraintRight_toLeftOf="@id/iv_person_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52mm"
+            android:descendantFocusability="afterDescendants"
+            android:spinnerMode="dropdown"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_meet_nume"
+            app:layout_constraintRight_toLeftOf="@id/iv_person_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_person_arrow"
+            android:layout_width="15mm"
+            android:layout_height="15mm"
+            android:src="@drawable/icon_arrow_down"
+            android:layout_marginRight="16mm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_meeting_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dev_set_hour"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/rl_meet_hour"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_num"
+        app:layout_constraintTop_toTopOf="@id/rl_meet_hour" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/rl_meet_hour"
+        android:layout_width="188dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/shape_login_edit"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_num"
+        app:layout_constraintRight_toRightOf="@id/rl_meet_num"
+        app:layout_constraintTop_toBottomOf="@id/rl_meet_num">
+
+        <TextView
+            android:id="@+id/tv_meet_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16mm"
+            android:textColor="@color/color_5b5b70"
+            android:text="选择会议时长"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginRight="2mm"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <Spinner
+            android:id="@+id/spinner_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:descendantFocusability="afterDescendants"
+            app:layout_constraintRight_toLeftOf="@id/iv_hour_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_meet_hour"
+            android:layout_marginLeft="52mm"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_spinner_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2小时"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:gravity="right"
+            android:focusable="true"
+            app:layout_constraintRight_toLeftOf="@id/iv_hour_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/iv_hour_arrow"
+            android:layout_width="15mm"
+            android:layout_height="15mm"
+            android:src="@drawable/icon_arrow_down"
+            android:layout_marginRight="16mm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_meet_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dev_set_id"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_hour"
+        app:layout_constraintTop_toTopOf="@id/rg_meet_id" />
+
+    <RadioGroup
+        android:id="@+id/rg_meet_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="10mm"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/rl_meet_hour">
+
+        <RadioButton
+            android:id="@+id/rb_id_self"
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/bg_selector_rb_setting"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:padding="2mm"
+            android:text="本人ID"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <RadioButton
+            android:id="@+id/rb_id_auto"
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/bg_selector_rb_setting"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:padding="2mm"
+            android:text="@string/str_dev_set_id_auto"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_meet_into"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dev_set_id_into"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_hour"
+        app:layout_constraintTop_toTopOf="@id/rg_meet_into" />
+
+    <RadioGroup
+        android:id="@+id/rg_meet_into"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="10mm"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/rg_meet_id">
+
+        <RadioButton
+            android:id="@+id/rb_id_host"
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/bg_selector_rb_setting"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:padding="2mm"
+            android:text="@string/str_dev_set_host"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <RadioButton
+            android:id="@+id/rb_id_all"
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/bg_selector_rb_setting"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:padding="2mm"
+            android:text="@string/str_dev_set_all"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:nextFocusDown="@id/password"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_meet_psd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会议密码"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_hour"
+        app:layout_constraintTop_toTopOf="@id/password"
+        app:layout_constraintBottom_toBottomOf="@id/password"/>
+
+    <CheckBox
+        android:id="@+id/cb_close_psw"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/bg_selector_cb_setting"
+        android:background="@null"
+        android:padding="2mm"
+        android:layout_marginLeft="10mm"
+        app:layout_constraintTop_toTopOf="@id/password"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        android:layout_marginRight="12dp"/>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_input_psd"-->
+<!--        android:layout_width="156dp"-->
+<!--        -->
+<!--        android:layout_marginRight="30mm"-->
+<!--        android:background="@drawable/bg_selector_et_login"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/rg_meet_into"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/guild_line_first"-->
+<!--        android:layout_height="30dp">-->
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:hint="请输入入会密码"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="12dp"
+            android:paddingLeft="16mm"
+            android:paddingRight="32mm"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_5b5b70"
+            android:textSize="12sp"
+            android:background="@drawable/bg_selector_et_login"
+            android:layout_centerVertical="true"
+            android:inputType="number"
+            android:maxLength="5"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/rg_meet_into"
+            app:layout_constraintLeft_toRightOf="@id/cb_close_psw"
+            app:layout_constraintRight_toRightOf="@id/rl_meet_hour"/>
+
+        <ImageView
+            android:id="@+id/iv_pwd_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:onClick="clickEye"
+            android:focusable="true"
+            android:padding="5dp"
+            android:src="@drawable/selector_pwd_eye"
+            app:layout_constraintRight_toRightOf="@id/password"
+            app:layout_constraintTop_toTopOf="@id/password"
+            app:layout_constraintBottom_toBottomOf="@id/password"/>
+<!--    </RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/tv_meet_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dev_set_share"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_hour"
+        app:layout_constraintTop_toTopOf="@id/rg_meet_share" />
+
+    <RadioGroup
+        android:id="@+id/rg_meet_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10mm"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/password">
+
+        <RadioButton
+            android:id="@+id/rb_id_share_host"
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/bg_selector_rb_setting"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:padding="2mm"
+            android:text="@string/str_dev_set_host"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:nextFocusUp="@id/password"/>
+
+        <RadioButton
+            android:id="@+id/rb_id_share_all"
+            android:layout_width="215mm"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/bg_selector_rb_setting"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:checked="true"
+            android:padding="2mm"
+            android:text="@string/str_dev_set_all"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_meet_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/str_setting_into_self"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_hour"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip" />
+
+    <CheckBox
+        android:id="@+id/cb_close_micro"
+        android:layout_width="215mm"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/bg_selector_cb_setting"
+        android:drawablePadding="10dp"
+        android:background="@null"
+        android:padding="2mm"
+        android:layout_marginLeft="8mm"
+        android:text="@string/str_dev_cb_close_micro"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_meet_set"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour" />
+
+    <CheckBox
+        android:id="@+id/cb_open_camera"
+        android:layout_width="215mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/bg_selector_cb_setting"
+        android:drawablePadding="10dp"
+        android:background="@null"
+        android:padding="2mm"
+        android:layout_marginLeft="8mm"
+        android:text="@string/str_dev_cb_open_camera"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/cb_close_micro" />
+
+    <CheckBox
+        android:id="@+id/cb_auto_into"
+        android:layout_width="215mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/bg_selector_cb_setting"
+        android:drawablePadding="10dp"
+        android:background="@null"
+        android:padding="2mm"
+        android:layout_marginLeft="8mm"
+        android:text="@string/str_dev_cb_auto_into"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/cb_open_camera" />
+
+    <TextView
+        android:id="@+id/tv_meet_set_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/str_setting_create_room"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meeting_hour"
+        app:layout_constraintTop_toTopOf="@id/cb_open_micro_self"
+        app:layout_constraintBaseline_toBaselineOf="@id/cb_open_micro_self"/>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_setting_create_info"
+        android:textSize="@dimen/sp_10"
+        android:textColor="@color/color_5b5b70"
+        app:layout_constraintTop_toBottomOf="@id/tv_meet_set_create"
+        app:layout_constraintLeft_toLeftOf="@id/tv_meet_set_create"
+        app:layout_constraintRight_toRightOf="@id/tv_meet_set_create"
+        />
+
+
+    <CheckBox
+        android:id="@+id/cb_open_micro_self"
+        android:layout_width="215mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/bg_selector_cb_setting"
+        android:drawablePadding="10dp"
+        android:background="@null"
+        android:padding="2mm"
+        android:layout_marginLeft="8mm"
+        android:text="@string/str_dev_cb_micro_self"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/rg_meet_share" />
+
+    <CheckBox
+        android:id="@+id/cb_open_share_self"
+        android:layout_width="215mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/bg_selector_cb_setting"
+        android:drawablePadding="10dp"
+        android:background="@null"
+        android:padding="2mm"
+        android:layout_marginLeft="8mm"
+        android:visibility="gone"
+        android:text="@string/str_dev_cb_share_self"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/rl_meet_hour"
+        app:layout_constraintTop_toBottomOf="@id/cb_open_micro_self" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0mm"
+        android:layout_height="0mm"
+        android:background="@color/color_170B35"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_first"
+        app:layout_constraintRight_toLeftOf="@id/guild_line_second"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/color_19edf0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_dev_device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="21dp"
+            android:text="@string/str_dev_set_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_camera_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/str_dev_camera_angle"
+            android:textColor="@color/color_19edf0"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="@id/iv_angle_switch"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_angle_switch" />
+
+        <ImageView
+            android:id="@+id/iv_angle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/icon_switch_on"
+            android:focusable="true"
+            android:padding="2mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_dev_device_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="@string/str_dev_camera_angle_invert"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="@id/iv_angle_switch"
+            app:layout_constraintLeft_toRightOf="@id/iv_angle_switch"
+            app:layout_constraintTop_toTopOf="@id/iv_angle_switch" />
+
+        <TextView
+            android:id="@+id/tv_camera_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/str_dev_camera_focus"
+            android:textColor="@color/color_19edf0"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_camera_angle"
+            app:layout_constraintTop_toBottomOf="@id/iv_angle_switch" />
+
+        <RadioGroup
+            android:id="@+id/rg_camera_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/iv_angle_switch"
+            app:layout_constraintTop_toTopOf="@id/tv_camera_focus">
+
+            <RadioButton
+                android:id="@+id/rb_camera_focus_auto"
+                android:layout_width="215mm"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="@string/str_dev_auto"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb_camera_focus_hand"
+                android:layout_width="215mm"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6mm"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="@string/str_dev_hand"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_camera_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dev_img_config"
+            android:textColor="@color/color_19edf0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_img_config"
+            app:layout_constraintLeft_toLeftOf="@id/tv_camera_focus"
+            app:layout_constraintTop_toTopOf="@id/btn_img_config" />
+
+        <Button
+            android:id="@+id/btn_img_config"
+            android:layout_width="76dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_selector_btn_bg_r26"
+            android:gravity="center"
+            android:text="@string/str_dev_img_config"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/rg_camera_focus"
+            app:layout_constraintTop_toBottomOf="@id/rg_camera_focus" />
+
+        <TextView
+            android:id="@+id/tv_audio_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dev_audio_input"
+            android:textColor="@color/color_19edf0"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_camera_angle"
+            app:layout_constraintTop_toTopOf="@id/rg_audio_input" />
+
+        <RadioGroup
+            android:id="@+id/rg_audio_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="@id/iv_angle_switch"
+            app:layout_constraintTop_toBottomOf="@id/btn_img_config">
+
+            <RadioButton
+                android:id="@+id/rb_audio_input_linein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_linein"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="Line in "
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb_audio_input_usb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6mm"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_usb"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="USB     "
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb_audio_input_micin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6mm"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_micin"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="MICIN  "
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_audio_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dev_audio_output"
+            android:textColor="@color/color_19edf0"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_camera_angle"
+            app:layout_constraintTop_toTopOf="@id/rg_audio_output" />
+
+        <RadioGroup
+            android:id="@+id/rg_audio_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="@id/iv_angle_switch"
+            app:layout_constraintTop_toBottomOf="@id/rg_audio_input">
+
+            <RadioButton
+                android:id="@+id/rb_audio_output_hdmi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_hdmi"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="HDMI 1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb_audio_output_hdmi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6mm"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_hdmi"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="HDMI 2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb_audio_output_linein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6mm"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_linein"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="Line out"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb_audio_output_usb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6mm"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_rb_setting"
+                android:drawableRight="@drawable/icon_usb"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="2mm"
+                android:text="USB     "
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_audio_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/str_dev_audio"
+            android:textColor="@color/color_19edf0"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_camera_angle"
+            app:layout_constraintTop_toBottomOf="@id/rg_audio_output" />
+
+        <TextView
+            android:id="@+id/tv_audio_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dev_audio_support"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_audio_title"
+            app:layout_constraintLeft_toLeftOf="@id/iv_angle_switch" />
+
+        <ImageView
+            android:id="@+id/iv_switch_zimu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/icon_switch_on"
+            android:focusable="true"
+            android:padding="2mm"
+            app:layout_constraintLeft_toLeftOf="@id/iv_angle_switch"
+            app:layout_constraintTop_toBottomOf="@id/tv_audio_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_zimu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dev_zimu"
+            android:textColor="@color/color_19edf0"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_switch_zimu"
+            app:layout_constraintLeft_toLeftOf="@id/tv_camera_angle"
+            app:layout_constraintTop_toTopOf="@id/iv_switch_zimu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:hint="输入公告信息"
+            android:textColorHint="@color/color_5b5b70"
+            android:text="@string/str_zimu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_switch_zimu"
+            app:layout_constraintLeft_toRightOf="@id/iv_switch_zimu"
+            app:layout_constraintTop_toTopOf="@id/iv_switch_zimu" />
+
+        <EditText
+            android:id="@+id/et_zimu"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_shape_c170b35_w05_lc19edf0"
+            android:visibility="gone"
+            android:gravity="left|top"
+            android:hint="@string/str_dev_input_zimu"
+            android:paddingLeft="12dp"
+            android:paddingTop="7dp"
+            android:textColor="@color/white"
+            android:textColorHighlight="#5b5b70"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="@id/tv_zimu_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_switch_zimu" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/color_19edf0"
+        app:layout_constraintLeft_toLeftOf="@id/guild_line_second"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dev_version_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/str_dev_version_set_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_net_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="终端网络"
+        android:textColor="@color/color_19edf0"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_net_config"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toTopOf="@id/btn_net_config" />
+
+    <Button
+        android:id="@+id/btn_net_config"
+        android:layout_width="80mm"
+        android:layout_height="30mm"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_selector_btn_bg_r26"
+        android:text="有线"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toBottomOf="@id/tv_dev_version_title" />
+
+    <Button
+        android:id="@+id/btn_net_config_wifi"
+        android:layout_width="80mm"
+        android:layout_height="30mm"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_selector_btn_bg_r26"
+        android:text="无线"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toBottomOf="@id/btn_net_config" />
+
+    <TextView
+        android:id="@+id/tv_version_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30mm"
+        android:layout_marginTop="13mm"
+        android:text="@string/str_soft_version"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toBottomOf="@id/btn_net_config_wifi" />
+
+    <TextView
+        android:id="@+id/tv_version_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:text="1.0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_version_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_version_title" />
+
+    <TextView
+        android:id="@+id/tv_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30mm"
+        android:layout_marginTop="12mm"
+        android:text="@string/str_window"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toBottomOf="@id/tv_version_title" />
+
+    <RadioGroup
+        android:id="@+id/rg_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_version_content"
+        app:layout_constraintTop_toTopOf="@id/tv_window">
+
+        <RadioButton
+            android:id="@+id/rb_window_1920"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/bg_selector_rb_setting"
+            android:background="@null"
+            android:padding="2mm"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:text="@string/str_1920"
+            android:drawablePadding="11mm"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_window_3840"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/bg_selector_rb_setting"
+            android:background="@null"
+            android:padding="2mm"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:text="@string/str_3840"
+            android:layout_marginTop="8mm"
+            android:drawablePadding="11mm"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_title_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dev_update"
+        android:textColor="@color/color_19edf0"
+        android:textSize="@dimen/sp_12"
+        android:layout_marginLeft="30mm"
+        app:layout_constraintLeft_toRightOf="@id/guild_line_second"
+        app:layout_constraintTop_toTopOf="@id/btn_update"
+        app:layout_constraintBottom_toBottomOf="@id/btn_update"
+        />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="100mm"
+        android:layout_height="30mm"
+        android:text="@string/str_dev_update"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:background="@drawable/bg_selector_btn_bg_r26"
+        android:layout_marginTop="12mm"
+        android:nextFocusDown="@id/btn_sava"
+        app:layout_constraintLeft_toLeftOf="@id/tv_version_content"
+        app:layout_constraintTop_toBottomOf="@id/rg_window"
+        />
+
+    <Button
+        android:id="@+id/btn_sava"
+        android:layout_width="232mm"
+        android:layout_height="30mm"
+        android:text="@string/str_sava"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_selector_btn_bg_r0"
+        android:layout_marginBottom="114mm"
+        app:layout_constraintLeft_toLeftOf="@id/guild_line_second"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

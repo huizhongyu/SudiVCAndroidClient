@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guildline"
+        android:layout_width="1mm"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24"
+        />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constaint_root"
+        android:layout_width="0mm"
+        android:layout_height="0mm"
+        android:background="@color/color_2d2944"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guildline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_40mm"
+            android:text="@string/str_sava"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_marginLeft="@dimen/dimens_20mm"
+            android:layout_marginRight="@dimen/dimens_20mm"
+            android:layout_marginTop="@dimen/dimens_30mm"
+            android:background="@drawable/bg_selector_setting_save"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+
+        <Button
+            android:id="@+id/btn_common"
+            android:layout_width="120mm"
+            android:layout_height="120mm"
+            android:text="@string/str_setting_title_common"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:layout_marginTop="105mm"
+            android:paddingTop="30mm"
+            android:paddingBottom="30mm"
+            android:drawableTop="@drawable/icon_setting_common"
+            android:background="@drawable/bg_selector_settings_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_meetsetting"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+        <Button
+            android:id="@+id/btn_meetsetting"
+            android:layout_width="120mm"
+            android:layout_height="120mm"
+            android:background="@drawable/bg_selector_settings_item"
+            android:text="@string/str_setting_title_meetsetting"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:drawableTop="@drawable/icon_setting_meet"
+            android:paddingTop="30mm"
+            android:paddingBottom="30mm"
+            android:layout_marginTop="@dimen/dimens_20mm"
+            android:layout_marginBottom="@dimen/dimens_20mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_common"
+            app:layout_constraintBottom_toTopOf="@id/btn_net_link"
+            />
+
+
+        <Button
+            android:id="@+id/btn_server"
+            android:layout_width="120mm"
+            android:layout_height="120mm"
+            android:layout_marginBottom="125mm"
+            android:layout_marginTop="50mm"
+            android:background="@drawable/bg_selector_settings_item"
+            android:drawableTop="@drawable/icon_server"
+            android:paddingTop="30mm"
+            android:paddingBottom="30mm"
+            android:text="@string/str_setting_title_server"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/btn_common"
+            app:layout_constraintTop_toBottomOf="@id/btn_common" />
+
+        <Button
+            android:id="@+id/btn_net_link"
+            android:layout_width="120mm"
+            android:layout_height="120mm"
+            android:text="@string/str_setting_title_net_link"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:background="@drawable/bg_selector_settings_item"
+            android:drawableTop="@drawable/icon_setting_netlink"
+            android:paddingTop="30mm"
+            android:paddingBottom="30mm"
+            android:layout_marginBottom="@dimen/dimens_35mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_meetsetting"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_contair"
+        android:layout_width="0mm"
+        android:layout_height="0mm"
+        android:background="@color/color_3a3550"
+        app:layout_constraintLeft_toRightOf="@id/guildline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>

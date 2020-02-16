@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_575e76"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="0mm"
+        android:layout_height="match_parent"
+        android:background="@color/color_353748"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guild_first"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guild_first"
+        android:layout_width="@dimen/dimens_1mm"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1666667"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guild_second"
+        android:layout_width="@dimen/dimens_1mm"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45833333"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_ignore"
+        android:layout_width="140mm"
+        android:layout_height="@dimen/dimens_40mm"
+        android:layout_marginTop="30mm"
+        android:layout_marginLeft="20mm"
+        android:layout_marginRight="@dimen/dimens_20mm"
+        android:text="@string/str_start_now"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:focusable="true"
+        android:background="@drawable/bg_selector_contact_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guild_first"
+        />
+
+    <TextView
+        android:id="@+id/tv_start_meet"
+        android:layout_width="140mm"
+        android:layout_height="@dimen/dimens_40mm"
+        android:layout_marginTop="15mm"
+        android:layout_marginLeft="20mm"
+        android:layout_marginRight="@dimen/dimens_20mm"
+        android:text="@string/str_start_meet"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:focusable="true"
+        android:background="@drawable/bg_selector_contact_btn"
+        app:layout_constraintTop_toBottomOf="@id/tv_ignore"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guild_first"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_item_company"
+        android:layout_width="0mm"
+        android:layout_height="@dimen/dimens_40mm"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="企业通讯录"
+        android:drawableLeft="@drawable/icon_0212_title_company"
+        android:layout_marginTop="@dimen/dimens_20mm"
+        android:focusable="true"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="30mm"
+        android:drawablePadding="@dimen/dimens_8mm"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_meet"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guild_first"
+        />
+
+    <View
+        android:layout_width="0mm"
+        android:layout_height="0.5mm"
+        android:background="@color/color_717991"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_item_company"
+        app:layout_constraintBottom_toTopOf="@id/tv_title_item_group"
+        app:layout_constraintRight_toLeftOf="@id/guild_first"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_item_group"
+        android:layout_width="0mm"
+        android:layout_height="@dimen/dimens_40mm"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="群组"
+        android:drawableLeft="@drawable/icon_0212_title_group"
+        android:focusable="true"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="30mm"
+        android:drawablePadding="@dimen/dimens_8mm"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_item_company"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guild_first"
+        />
+
+        <View
+            android:layout_width="0mm"
+            android:layout_height="0.5mm"
+            android:background="@color/color_717991"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_item_group"
+            app:layout_constraintRight_toLeftOf="@id/guild_first"
+            />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0mm"
+        android:layout_height="0mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="@dimen/dimens_15mm"
+        android:layout_marginBottom="@dimen/dimens_12mm"
+        android:layout_marginLeft="@dimen/dimens_15mm"
+        android:background="@color/color_4d536d"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guild_first"
+        app:layout_constraintRight_toLeftOf="@id/guild_second">
+
+        <LinearLayout
+            android:id="@+id/ll_contanir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="0mm"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimens_12mm"
+        android:layout_marginBottom="@dimen/dimens_12mm"
+        android:layout_marginRight="15mm"
+        android:background="@color/color_4d536d"
+        app:layout_constraintLeft_toRightOf="@id/guild_second"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_has_choose"
+            android:layout_width="match_parent"
+            android:layout_height="40mm"
+            android:text="已选 0"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:paddingLeft="20mm"
+            android:gravity="center_vertical|left"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5mm"
+            android:background="@color/color_717991"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_has_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginTop="@dimen/dimens_10mm"
+            android:layout_marginLeft="@dimen/dimens_12mm"
+            android:layout_marginRight="@dimen/dimens_12mm"
+            />
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

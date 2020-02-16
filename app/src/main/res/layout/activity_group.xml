@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="cn.closeli.rtc.GroupActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constaint_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40mm"
+        android:background="@drawable/bg_group_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_system_name"
+            style="@style/style_text_popup_invite_item"
+            android:textSize="13sp"
+            android:layout_marginLeft="50mm"
+            android:layout_marginTop="11mm"
+            android:layout_marginBottom="14mm"
+            android:text="sudikeji"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/account"
+            style="@style/style_text_popup_invite_item"
+            android:textSize="13sp"
+            android:layout_marginLeft="16mm"
+            android:text="ID: "
+            app:layout_constraintBottom_toTopOf="@id/tv_system_name"
+            app:layout_constraintLeft_toRightOf="@id/tv_system_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_system_name" />
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            style="@style/style_text_popup_invite_item"
+            android:layout_marginLeft="15mm"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/tv_system_name"
+            app:layout_constraintLeft_toRightOf="@id/account"
+            app:layout_constraintTop_toBottomOf="@id/tv_system_name" />
+
+        <TextView
+            android:id="@+id/tv_connect_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10mm"
+            android:layout_marginBottom="7mm"
+            android:background="@drawable/bg_shape_r11_c33000000"
+            android:gravity="center_vertical"
+            android:paddingLeft="17mm"
+            android:paddingTop="5mm"
+            android:paddingRight="33mm"
+            android:paddingBottom="5mm"
+            android:text="@string/str_group_connected"
+            android:textColor="@color/color_00ffff"
+            android:textSize="8sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_icon_status"
+            android:layout_width="13mm"
+            android:layout_height="13mm"
+            android:layout_marginRight="15mm"
+            android:src="@drawable/icon_group_connected"
+            app:layout_constraintBottom_toTopOf="@id/tv_connect_status"
+            app:layout_constraintRight_toRightOf="@id/tv_connect_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_connect_status" />
+
+
+        <TextView
+            android:id="@+id/tv_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimens_50mm"
+            android:fontFamily="sans-serif-light"
+            android:text="09:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/style_text_popup_invite_item"
+            android:layout_marginRight="8mm"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_clock"
+            app:layout_constraintRight_toLeftOf="@id/tv_clock" />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0mm"
+        android:background="@drawable/homepage_bg_0113"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constaint_top_bar">
+
+        <FrameLayout
+            android:id="@+id/fl_local"
+            android:layout_width="210mm"
+            android:layout_height="118mm"
+            android:layout_marginTop="120mm"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/divide_line"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/iv_local_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#101c36"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_local_scale"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|right"
+                android:nextFocusLeft="@id/iv_local_scale"
+                android:nextFocusUp="@id/iv_create_room"
+                android:nextFocusDown="@id/iv_local_scale" />
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/sfv_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transitionName="transition_sfv_local"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="383dp"
+                tools:layout_editor_absoluteY="152dp" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_holder_local"
+            android:layout_width="212mm"
+            android:layout_height="120mm"
+            android:background="@drawable/bg_selector_r3_lcwhite"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/fl_local"
+            app:layout_constraintLeft_toLeftOf="@id/fl_local"
+            app:layout_constraintRight_toRightOf="@id/fl_local"
+            app:layout_constraintTop_toTopOf="@id/fl_local" />
+
+        <FrameLayout
+            android:id="@+id/fl_support"
+            android:layout_width="210mm"
+            android:layout_height="118mm"
+            android:layout_marginTop="14mm"
+            android:background="@drawable/bg_selector_r3_lcwhite"
+            app:layout_constraintLeft_toLeftOf="@id/fl_local"
+            app:layout_constraintTop_toBottomOf="@+id/fl_local">
+
+
+            <ImageView
+                android:id="@+id/iv_support_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#101c36"
+                android:visibility="gone" />
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/sfv_support"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_no_share"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_181B22"
+                android:nextFocusUp="@id/iv_create_room">
+
+                <ImageView
+                    android:id="@+id/iv_icon_share"
+                    android:layout_width="60mm"
+                    android:layout_height="60mm"
+                    android:src="@drawable/icon_share_"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_tip_share"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_tip_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投屏演示"
+                    android:textSize="11sp"
+                    android:textColor="@color/color_989fb0"
+                    app:layout_constraintTop_toBottomOf="@id/iv_icon_share"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_holder_support"
+            android:layout_width="212mm"
+            android:layout_height="120mm"
+            android:background="@drawable/bg_selector_r3_lcwhite"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/fl_support"
+            app:layout_constraintLeft_toLeftOf="@id/fl_support"
+            app:layout_constraintRight_toRightOf="@id/fl_support"
+            app:layout_constraintTop_toTopOf="@id/fl_support" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="0.1mm"
+            android:layout_height="200mm"
+            android:layout_marginLeft="30mm"
+            android:layout_marginTop="145mm"
+            android:background="@color/color_7f7f7f"
+            app:layout_constraintLeft_toRightOf="@id/fl_local"
+            app:layout_constraintRight_toLeftOf="@id/iv_create_room"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_create_room"
+            android:layout_width="205mm"
+            android:layout_height="148mm"
+            android:layout_marginTop="109mm"
+            android:layout_marginLeft="20mm"
+            android:background="@drawable/bg_selector_group_createroom"
+            android:focusable="true"
+            app:layout_constraintLeft_toRightOf="@id/divide_line"
+            app:layout_constraintRight_toLeftOf="@id/iv_contract"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <ImageView
+            android:id="@+id/iv_join_room"
+            android:layout_width="205mm"
+            android:layout_height="148mm"
+            android:layout_marginTop="241mm"
+            android:focusable="true"
+            android:src="@drawable/bg_selector_group_joinroom"
+            app:layout_constraintLeft_toLeftOf="@id/iv_create_room"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_contract"
+            android:layout_width="205mm"
+            android:layout_height="148mm"
+            android:focusable="true"
+            android:src="@drawable/bg_selector_group_contract"
+            app:layout_constraintLeft_toRightOf="@id/iv_create_room"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_create_room" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="205mm"
+            android:layout_height="148mm"
+            android:focusable="true"
+            android:src="@drawable/bg_selector_group_setting"
+            app:layout_constraintLeft_toRightOf="@id/iv_join_room"
+            app:layout_constraintTop_toTopOf="@id/iv_join_room" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40mm"
+        android:layout_marginBottom="40mm"
+        android:focusable="true"
+        android:padding="5mm"
+        android:visibility="gone"
+        android:src="@drawable/bg_selector_login_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

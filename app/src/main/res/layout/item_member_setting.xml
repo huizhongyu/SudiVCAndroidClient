@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selector_meet_item"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="232mm"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dimens_25mm"
+            android:layout_height="@dimen/dimens_25mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_10mm"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4mm"
+                android:text="张三"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Android) 北京开发部"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+
+        <top.androidman.SuperButton
+            android:id="@+id/iv_role"
+            android:layout_gravity="right|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimens_8mm"
+            android:paddingLeft="@dimen/dimens_8mm"
+            android:paddingTop="@dimen/dimens_5mm"
+            android:paddingRight="@dimen/dimens_8mm"
+            android:paddingBottom="@dimen/dimens_5mm"
+            app:color_normal="@color/color_FF9800"
+            app:corner="@dimen/dimens_10mm"
+            app:layout_constraintBottom_toBottomOf="@id/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text="主持人"
+            app:textColor="@color/white"
+            app:textSize="@dimen/dimens_11mm" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8mm"
+        android:background="@color/color_19edf0" />
+
+</FrameLayout>

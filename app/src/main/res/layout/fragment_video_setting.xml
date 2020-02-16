@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_0A0026">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimens_10mm"
+        android:paddingTop="@dimen/dimens_50mm"
+        android:paddingRight="@dimen/dimens_20mm">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/meeting_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_15mm" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/layouts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimens_20mm"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/dimens_40mm" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/restore_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_15mm"
+            android:background="@drawable/selector_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimens_20mm"
+            android:paddingTop="@dimen/dimens_15mm"
+            android:paddingRight="@dimen/dimens_20mm"
+            android:paddingBottom="@dimen/dimens_15mm"
+            android:text="@string/restore_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_12mm" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_15mm"
+            android:background="@drawable/selector_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimens_20mm"
+            android:paddingTop="@dimen/dimens_15mm"
+            android:paddingRight="@dimen/dimens_20mm"
+            android:paddingBottom="@dimen/dimens_15mm"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_12mm" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

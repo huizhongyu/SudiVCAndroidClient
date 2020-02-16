@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="77mm"
+        android:background="@drawable/login_line_bg_">
+
+    <TextView
+        android:id="@+id/tv_title_net"
+        android:layout_width="305mm"
+        android:layout_height="wrap_content"
+        android:text="网络"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:paddingLeft="40mm"
+        android:paddingTop="55mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_net_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:text="网络设置"
+        android:layout_marginLeft="40mm"
+        android:layout_marginTop="47mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_net"
+        />
+
+    <Button
+        android:id="@+id/btn_net"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:background="@drawable/bg_selector_c3c4779_lc00ffff"
+        android:text="有线"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_marginRight="30mm"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_net_setting"
+        />
+
+    <Button
+        android:id="@+id/btn_wifi"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:background="@drawable/bg_selector_c3c4779_lc00ffff"
+        android:text="无线"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_marginRight="30mm"
+        android:layout_marginTop="8mm"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_net"
+        />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:background="@drawable/bg_selector_r2_cancel"
+        android:layout_marginRight="30mm"
+        android:layout_marginBottom="50mm"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:text="取消"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

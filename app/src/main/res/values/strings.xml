@@ -1,0 +1,186 @@
+<resources>
+    <string name="app_name">云视讯</string>
+    <string name="switch_button">摄像头切换</string>
+    <string name="video_enable">摄像头</string>
+    <string name="audio_enable">麦克风</string>
+    <string name="audio_speaker">扬声器</string>
+    <string name="session_name">会议ID(用于创建和加入会议)</string>
+    <string name="default_session_name">会议ID</string>
+    <string name="participant_name">参会人</string>
+    <string name="default_participant_name">参会人</string>
+    <string name="socket_address">URL</string>
+    <string name="hang_up">离开</string>
+    <string name="all_mute">全体静音</string>
+    <string name="no_connection">COULDN\'T STABLISH THE CONNECTION, TRY AGAIN :)</string>
+    <string name="no_permissions_granted">We can\'t give you service without your permission</string>
+    <string name="permissions_dialog_title">We need your help</string>
+    <string name="accept_permissions_dialog">GIVE PERMISSIONS!</string>
+    <string name="cancel_dialog">Cancel</string>
+    <string name="no_internet_connection">NO INTERNET CONNECTION:( PLEASE CHECK YOUR CONNECTION</string>
+    <string-array name="channel_role_arr">
+        <item>发布|观看</item>
+        <item>仅发布</item>
+        <item>仅观看</item>
+    </string-array>
+    <string name="local_preview">本地预览</string>
+    <!--login-->
+    <string name="forget_pwd">忘记密码？</string>
+    <string name="remember_pwd">记住密码</string>
+    <string name="please_input_your_account">输入登录账号</string>
+    <string name="please_input_account">请输入手机号/邮箱</string>
+    <string name="please_input_pwd">输入登录密码</string>
+    <string name="create_room">发起会议</string>
+    <string name="join_room">加入会议</string>
+    <string name="yuyue_room">预约会议</string>
+
+    <string name="str_stand">标准音量</string>
+    <string name="str_audio_max">最大音量</string>
+    <string name="str_audio_min">最小音量</string>
+
+    <string name="str_topping">置顶</string>
+    <string name="str_substitution">换人</string>
+    <string name="str_mac">麦克风</string>
+
+    <string name="str_setting_join">入会者设置</string>
+    <string name="str_setting_mine">我的设置</string>
+
+    <!--会控相关设置-->
+    <string name="str_setting_mine_allow">允许被主持人关闭麦克风的情况下,自己打开麦克风</string>
+    <string name="str_setting_host_change">主持人管理权限转让</string>
+    <string name="str_setting_join_camera">入会者摄像头</string>
+    <string name="str_setting_join_micro">入会者麦克风</string>
+    <string name="str_setting_join_share">入会者共享屏幕</string>
+    <string name="str_setting_join_record">入会者录制权限</string>
+
+    <string name="str_setting_open_all">全体开启</string>
+    <string name="str_setting_close_all">全体关闭</string>
+
+    <string name="str_join_tip">注：若会议无密码则无需填写</string>
+    <string name="str_join_title">参会者入会</string>
+    <string name="str_join_input_id">输入会议ID</string>
+    <string name="str_join_input_pwd">输入会议密码</string>
+    <string name="str_join_not_auto">不自动连接语音</string>
+    <string name="str_join_camera_off">保持摄像头关闭</string>
+
+    <string name="str_title_devset">终端设置</string>
+    <string name="str_dev_meet_set_title">会议设置</string>
+    <string name="str_dev_set_title">硬终端设备设置</string>
+    <string name="str_dev_version_set_title">网络/版本设置</string>
+
+    <string name="str_dev_set_roomname">会议室名称</string>
+    <string name="str_dev_set_num">会议人数</string>
+    <string name="str_dev_set_hour">会议时长</string>
+    <string name="str_dev_set_id">会议ID</string>
+    <string name="str_dev_set_id_auto">系统自动分配</string>
+    <string name="str_dev_set_id_into">ID入会</string>
+    <string name="str_dev_set_host">仅主持人</string>
+    <string name="str_dev_set_all">全体参会人员</string>
+    <string name="str_dev_set_share">共享权限</string>
+    <string name="str_dev_set">会议设置</string>
+    <string name="str_dev_cb_close_micro">入会时开启麦克风</string>
+    <string name="str_dev_cb_open_camera">入会时开启摄像头</string>
+    <string name="str_dev_cb_auto_into">终端自动入会</string>
+    <string name="str_dev_cb_micro_self">允许被主持人关闭麦克风的情况下，自己打开麦克风</string>
+    <string name="str_dev_cb_share_self">允许被主持人关闭共享屏幕的情况下，自己打开共享屏幕</string>
+    <string name="str_dev_camera_angle">摄像头角度</string>
+    <string name="str_dev_camera_angle_invert">倒置</string>
+    <string name="str_dev_camera_focus">摄像头聚焦</string>
+    <string name="str_dev_auto">自动</string>
+    <string name="str_dev_hand">手动</string>
+    <string name="str_dev_img_config">图像参数</string>
+    <string name="str_dev_audio_input">音频输入</string>
+    <string name="str_dev_audio_output">音频输出</string>
+    <string name="str_dev_audio">声音音量</string>
+    <string name="str_dev_audio_support">支持：高、中、低</string>
+    <string name="str_dev_zimu">公告字幕</string>
+    <string name="str_zimu">字幕</string>
+    <string name="str_dev_input_zimu">输入公告信息</string>
+    <string name="str_dev_about">关于硬终端</string>
+    <string name="str_dev_update">软件更新</string>
+    <string name="str_dev_version">版本更新</string>
+    <string name="str_dev_wh_set">会议设置</string>
+    <string name="str_soft_version">软件版本</string>
+    <string name="str_window">显示器</string>
+    <string name="str_1920">1920*1080 30帧</string>
+    <string name="str_3840">3840*2160 30帧</string>
+    <string name="str_sava">保存</string>
+
+    <string name="str_meet_theme">会议主题</string>
+    <string name="str_meet_id">会议ID</string>
+    <string name="str_meet_hour">会议时长</string>
+    <string name="tv_sure">确认</string>
+    <string name="tv_cancel">拒绝</string>
+    <string name="invite_join">主持人邀请你加入会议室</string>
+    <string name="str_time_10m">会议剩余时间</string>
+    <string name="str_time_1m">会议即将结束</string>
+    <string name="str_setting_into_self">入会本人设置</string>
+    <string name="str_setting_create_room">创会设置</string>
+    <string name="str_setting_create_info">注：主持人对参会者的操作权限设置</string>
+
+    <string name="digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="str_error_room_capacity_limit">已达会议室容纳与会者上线</string>
+    <string name="str_error_data_error">数据错误</string>
+    <string name="str_error_name_null">输入不能为空</string>
+
+    <string name="please_input_server_address">请输入服务器地址</string>
+    <string name="please_input_server_port">请输入服务器端口</string>
+    <string name="tv_save">保存</string>
+    <string name="tv_login_cancel">取消</string>
+
+    <!--11-25-->
+    <string name="str_setting_title_net_link">网络配置</string>
+    <string name="str_setting_title_common">通用</string>
+    <string name="str_setting_title_contact">通讯录</string>
+    <string name="str_setting_title_meetsetting">会议设置</string>
+    <string name="str_connect_state">连接状态</string>
+    <string name="str_quite">已退出</string>
+    <string name="scale2screen">放大全屏</string>
+    <string name="quite_screen">退出全屏</string>
+    <string name="open_mic">开启麦克风</string>
+    <string name="close_micro">关闭麦克风</string>
+    <string name="open_share_screen">开启共享屏</string>
+    <string name="close_share_screen">关闭共享屏</string>
+    <string name="open_zoom">放大显示</string>
+    <string name="close_zoom">缩小显示</string>
+    <string name="restore_default">恢复默认</string>
+    <string name="str_layout_default">默认布局</string>
+    <string name="cancel">取消</string>
+    <string name="meeting_layout">会议窗口布局</string>
+    <string name="str_setting_cb_control_mic">允许参会者自主开启麦克风</string>
+    <string name="str_setting_cb_control_share">允许主持人关闭共享屏幕</string>
+    <string name="str_setting_cb_into_auto">受邀自动入会</string>
+    <string name="manage_all_mic">管理所有\n麦克风</string>
+    <string name="manage_all_share">管理所有\n共享屏幕</string>
+    <string name="all_mic_open_num">麦克风:%d人开启/%d人关闭</string>
+    <string name="str_setting_contact_empty">暂无开通，请联系管理员加入企业组织</string>
+    <string name="roll_call">点名发言</string>
+
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="me">我</string>
+    <string name="hand_speaker">发言中</string>
+
+
+    <string name="str_setting_title_server">服务器配置</string>
+    <string name="str_setting_title_server_all">服务器配置 Server Configuration</string>
+    <string name="str_group_connected">网络已链接</string>
+    <string name="str_group_un_connect">网络未链接</string>
+    <string name="str_ignor">跳过</string>
+    <string name="str_title_contact">企业通讯录</string>
+    <string name="str_selector_all">全选</string>
+    <string name="str_selected">已选</string>
+    <string name="str_start_meet">发起</string>
+    <string name="str_invite">邀请</string>
+    <string name="str_start_a_meet">发起会议</string>
+
+    <string name="str_start_now">直接发起</string>
+    <string name="str_device_online">在线</string>
+    <string name="str_device_offline">离线</string>
+    <string name="str_device_busy">忙碌</string>
+    <string name="str_device_update">升级中</string>
+    <string name="str_save_success">保存成功</string>
+    <string name="str_click_noaccessin">暂不可用</string>
+    <string name="str_toast_input_empty">输入不能为空</string>
+    <string name="str_toast_history_empty">当前没有历史记录</string>
+</resources>

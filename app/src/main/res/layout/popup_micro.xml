@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="100mm"
+        android:layout_height="102mm"
+        android:paddingLeft="1mm"
+        android:paddingRight="1mm"
+        android:paddingTop="1mm"
+        android:background="@drawable/maininterface_menu_icon_microphone_bg">
+        <LinearLayout
+            android:id="@+id/ll_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8mm"
+            android:paddingTop="8mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_meet_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_stand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_stand"
+            android:textColor="@color/white"
+            android:textSize="8sp"/>
+
+            <ImageView
+                android:id="@+id/iv_switch_stand"
+                android:layout_width="14mm"
+                android:layout_height="14mm"
+                android:layout_marginLeft="10mm"
+                android:src="@drawable/icon_circle_checked"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/space_first"
+            android:layout_width="0mm"
+            android:layout_height="1px"
+            android:background="@color/color_1a3053"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_first" />
+
+        <LinearLayout
+            android:id="@+id/ll_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8mm"
+            android:paddingTop="8mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_meet_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space_first">
+
+        <TextView
+            android:id="@+id/tv_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_audio_max"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+            <ImageView
+                android:id="@+id/iv_switch_max"
+                android:layout_width="14mm"
+                android:layout_height="14mm"
+                android:layout_marginLeft="10mm"
+                android:src="@drawable/icon_circle_unchecked" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/space_second"
+            android:layout_width="0mm"
+            android:layout_height="1px"
+            android:background="@color/color_1a3053"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_second" />
+
+        <LinearLayout
+            android:id="@+id/ll_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8mm"
+            android:paddingTop="8mm"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/bg_selector_meet_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space_second">
+
+
+        <TextView
+            android:id="@+id/tv_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_audio_min"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+            <ImageView
+                android:id="@+id/iv_switch_min"
+                android:layout_width="14mm"
+                android:layout_height="14mm"
+                android:layout_marginLeft="10mm"
+                android:src="@drawable/icon_circle_unchecked" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

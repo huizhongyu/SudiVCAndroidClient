@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_title_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_setting_title_net_link"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40mm"
+        android:layout_marginLeft="30mm"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Network Link"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_marginLeft="10mm"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/tv_title_net"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_title_net"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_device_net"
+        style="@style/style_text_item_setting"
+        android:text="终端设置"
+        android:layout_marginTop="20mm"
+        android:layout_marginLeft="@dimen/dimens_20mm"
+        android:layout_marginRight="@dimen/dimens_20mm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_net_config"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:text="有线"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="115mm"
+        android:layout_marginTop="3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        android:background="@drawable/bg_selector_setting_btn"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title_device_net"
+        app:layout_constraintTop_toTopOf="@id/tv_title_device_net"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_device_net"
+        />
+
+    <Button
+        android:id="@+id/btn_wifi"
+        android:layout_width="90mm"
+        android:layout_height="34mm"
+        android:text="无线"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:layout_marginLeft="10mm"
+        android:layout_marginTop="3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        android:background="@drawable/bg_selector_setting_btn"
+        android:focusable="true"
+        app:layout_constraintLeft_toRightOf="@id/btn_net_config"
+        app:layout_constraintBaseline_toBaselineOf="@id/btn_net_config"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_device_address"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        android:text="服务器地址"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title_device_net"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_device_net"
+        />
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="300mm"
+        android:layout_height="0mm"
+        android:textColorHint="@color/white"
+        android:textSize="11sp"
+        android:paddingLeft="15mm"
+        android:paddingRight="15mm"
+        android:layout_marginTop="3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        android:inputType="textWebEditText"
+        android:hint="@string/please_input_server_address"
+        android:background="@drawable/bg_selector_meet_et"
+        app:layout_constraintLeft_toLeftOf="@id/btn_net_config"
+        app:layout_constraintTop_toTopOf="@id/tv_title_device_address"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_device_address"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_title_device_port"
+        style="@style/style_text_item_setting"
+        android:layout_marginTop="@dimen/dimens_5mm"
+        android:text="服务器端口"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title_device_address"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_device_address"
+        />
+
+    <EditText
+        android:id="@+id/et_port"
+        android:layout_width="300mm"
+        android:layout_height="0mm"
+        android:inputType="number"
+        android:hint="@string/please_input_server_port"
+        android:paddingLeft="15mm"
+        android:paddingRight="15mm"
+        android:layout_marginTop="3mm"
+        android:layout_marginBottom="@dimen/dimens_3mm"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="11sp"
+        android:maxLength="5"
+        android:background="@drawable/bg_selector_meet_et"
+        app:layout_constraintLeft_toLeftOf="@id/btn_net_config"
+        app:layout_constraintTop_toTopOf="@id/tv_title_device_port"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_device_port" />
+
+
+</android.support.constraint.ConstraintLayout>

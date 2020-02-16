@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="horizontal">
+
+    <!--入会者设置-->
+    <LinearLayout
+        android:background="@color/color_CC0A0026"
+        android:id="@+id/constraint_join_second"
+        android:layout_width="@dimen/dimens_278mm"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:animateLayoutChanges="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/check_container"
+            android:layout_marginTop="@dimen/dimens_50mm"
+            android:layout_marginBottom="12mm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_open_all"
+                android:layout_width="wrap_content"
+                android:layout_height="15mm"
+                android:layout_marginLeft="@dimen/dimens_40mm"
+                android:background="@drawable/bg_item_selector_white_line"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_setting_rb"
+                android:drawablePadding="4mm"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="1mm"
+                android:paddingRight="1dp"
+                android:text="@string/str_setting_open_all"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cb_close_all"
+                android:layout_width="wrap_content"
+                android:layout_height="15mm"
+                android:layout_marginLeft="@dimen/dimens_20mm"
+                android:background="@drawable/bg_item_selector_white_line"
+                android:button="@null"
+                android:drawableLeft="@drawable/bg_selector_setting_rb"
+                android:drawablePadding="4mm"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="1mm"
+                android:paddingRight="1dp"
+                android:text="@string/str_setting_close_all"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintBottom_toBottomOf="@id/cb_open_all"
+                app:layout_constraintLeft_toRightOf="@id/cb_open_all"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:background="@color/color_3C4779"
+            android:id="@+id/tv_status_num"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_40mm"
+            android:gravity="center"
+            android:paddingLeft="8mm"
+            android:paddingRight="16mm"
+            android:text="0人开启/0人关闭"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_close_all" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:paddingLeft="1mm"
+            android:paddingTop="1mm"
+            android:paddingRight="1mm"
+            android:paddingBottom="1mm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status_num" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide"
+        android:layout_gravity="right"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/color_666B7D"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:background="@color/color_CC0A0026"
+        android:layout_gravity="right"
+        android:layout_width="@dimen/dimens_130mm"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:drawablePadding="@dimen/dimens_10mm"
+            android:gravity="center"
+            android:id="@+id/ll_join_micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_50mm"
+            android:drawableTop="@drawable/selector_manage_micro"
+            android:focusable="true"
+            android:textSize="@dimen/dimens_11mm"
+            android:text="@string/manage_all_mic"
+            android:textColor="@color/selector_video_set_color" />
+
+        <TextView
+            android:textSize="@dimen/dimens_11mm"
+            android:gravity="center"
+            android:id="@+id/ll_join_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dimens_10mm"
+            android:layout_marginTop="@dimen/dimens_50mm"
+            android:drawableTop="@drawable/selector_manage_share"
+            android:focusable="true"
+            android:text="@string/manage_all_share"
+            android:textColor="@color/selector_video_set_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

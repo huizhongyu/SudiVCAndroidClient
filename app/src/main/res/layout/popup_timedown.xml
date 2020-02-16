@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constaint_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_d48806"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_root"-->
+<!--        android:layout_width="88mm"-->
+<!--        android:layout_height="44mm"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@color/color_d48806"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent">-->
+
+        <TextView
+            android:id="@+id/tv_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_time_10m"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_time_down"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginTop="6mm"
+            android:layout_marginLeft="16mm"
+            android:layout_marginRight="16mm"/>
+
+        <TextView
+            android:id="@+id/tv_time_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="10:00"
+            android:layout_marginBottom="6mm"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_title"
+            app:layout_constraintLeft_toLeftOf="@id/tv_time_title"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_close_white"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/tv_time_down"
+        app:layout_constraintBottom_toBottomOf="@id/tv_time_down"
+        app:layout_constraintRight_toRightOf="@id/tv_time_title"
+        />
+
+
+
+<!--    </LinearLayout>-->
+
+</android.support.constraint.ConstraintLayout>

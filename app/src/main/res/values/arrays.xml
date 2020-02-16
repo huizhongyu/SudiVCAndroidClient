@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="arrays_meet_num">
+        <item>1人</item>
+        <item>2人</item>
+        <item>3人</item>
+        <item>4人</item>
+        <item>5人</item>
+        <item>6人</item>
+        <item>7人</item>
+        <item>8人</item>
+        <item>9人</item>
+        <item>10人</item>
+        <item>11人</item>
+        <item>12人</item>
+    </array>
+
+    <array name="arrays_meet_num_sfu">
+        <item>1人</item>
+        <item>2人</item>
+        <item>3人</item>
+        <item>4人</item>
+        <item>5人</item>
+        <item>6人</item>
+        <item>7人</item>
+        <item>8人</item>
+    </array>
+
+    <array name="arrays_meet_hour">
+        <item>不限时</item>
+        <item>0.5小时</item>
+        <item>1小时</item>
+        <item>1.5小时</item>
+        <item>2小时</item>
+        <item>2.5小时</item>
+        <item>3小时</item>
+        <item>3.5小时</item>
+        <item>4小时</item>
+        <item>4.5小时</item>
+        <item>5小时</item>
+        <item>5.5小时</item>
+        <item>6小时</item>
+        <item>6.5小时</item>
+        <item>7小时</item>
+        <item>7.5小时</item>
+        <item>8小时</item>
+        <item>8.5小时</item>
+        <item>9小时</item>
+        <item>9.5小时</item>
+        <item>10小时</item>
+        <item>10.5小时</item>
+        <item>11小时</item>
+        <item>11.5小时</item>
+        <item>12小时</item>
+    </array>
+</resources>
