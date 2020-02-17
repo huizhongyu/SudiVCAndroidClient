@@ -60,6 +60,8 @@ public class NetworkLinkFragment extends Fragment implements CustomAdapt {
                     } else {
                         ((SettingsActivity)getActivity()).setNetConfigChange(false);
                     }
+                } else {
+                    ((SettingsActivity)getActivity()).setNetLinkItemChecked();
                 }
             }
         });
@@ -75,6 +77,8 @@ public class NetworkLinkFragment extends Fragment implements CustomAdapt {
                     } else {
                         ((SettingsActivity)getActivity()).setNetConfigChange(false);
                     }
+                } else {
+                    ((SettingsActivity)getActivity()).setNetLinkItemChecked();
                 }
             }
         });
@@ -106,6 +110,10 @@ public class NetworkLinkFragment extends Fragment implements CustomAdapt {
 
     private void initFocusLeft() {
         btn_net_config.setNextFocusLeftId(((SettingsActivity)getActivity()).getIdByPosition(3));
+        et_address.setNextFocusLeftId(((SettingsActivity)getActivity()).getIdByPosition(3));
+        et_port.setNextFocusLeftId(((SettingsActivity)getActivity()).getIdByPosition(3));
+        et_port.setNextFocusRightId(R.id.et_port);
+        et_port.setNextFocusDownId(R.id.et_port);
     }
 
     private void doInit() {

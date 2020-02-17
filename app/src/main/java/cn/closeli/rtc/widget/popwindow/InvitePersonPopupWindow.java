@@ -155,7 +155,14 @@ public class InvitePersonPopupWindow extends BasePopupWindow implements InvitePe
             tv_start_meet.setText(mContext.getString(R.string.str_start_a_meet));
         }
 
+
+        if (ll_contanir.getChildCount() > 0) {
+            tv_title_item_company.setNextFocusRightId(ll_contanir.getChildAt(0).getId());
+            tv_title_item_group.setNextFocusRightId(ll_contanir.getChildAt(0).getId());
+        }
         tv_ignore.setNextFocusLeftId(R.id.tv_ignore);
+        tv_ignore.setNextFocusRightId(R.id.tv_ignore);
+        tv_start_meet.setNextFocusRightId(R.id.tv_start_meet);
 
     }
 
@@ -189,8 +196,9 @@ public class InvitePersonPopupWindow extends BasePopupWindow implements InvitePe
         TextView tv_title_company = view.findViewById(R.id.tv_title_company);
         tv_title_company.setText(orgList.getOrganizationName());
         rootCompany.setNextFocusUpId(rootCompany.getId());
-        rootCompany.setNextFocusLeftId(rootCompany.getId());
+        rootCompany.setNextFocusLeftId(R.id.tv_title_item_company);
         rootCompany.setNextFocusRightId(R.id.iv_arrow_company);
+        view_focus.setNextFocusRightId(R.id.focus_view);
         ll_contanir.addView(view);
         if (fromType == Constract.INVITE_FROMTYPE_CONTRACT){
             ll_contanir.requestFocus();
@@ -245,8 +253,9 @@ public class InvitePersonPopupWindow extends BasePopupWindow implements InvitePe
             ConstraintLayout constraint_part_root = view.findViewById(R.id.constraint_part_root);
             View view_focus = view.findViewById(R.id.focus_view);
             constraint_part_root.setFocusable(true);
-            view.setNextFocusRightId(R.id.rcv_setting_org_list);
+            constraint_part_root.setNextFocusLeftId(R.id.tv_title_item_company);
             ImageView iv_arrow = view.findViewById(R.id.iv_arrow_part);
+            view_focus.setNextFocusRightId(R.id.focus_view);
             ImageView iv_state_company = view.findViewById(R.id.iv_state_company);
             if(currentChooseAllState.containsKey(org.getOrgId())) {
                 org.setAllChoose(currentChooseAllState.get(org.getOrgId()));
@@ -313,9 +322,9 @@ public class InvitePersonPopupWindow extends BasePopupWindow implements InvitePe
             }
             currentExpandCompanyItem.put(org.getOrgId(),view);
 
-            if (org.getOrganizationList().size() == 0) {
-                return;
-            }
+//            if (org.getOrganizationList().size() == 0) {
+//                return;
+//            }
         }
     }
 
@@ -409,8 +418,10 @@ public class InvitePersonPopupWindow extends BasePopupWindow implements InvitePe
             ConstraintLayout constraint_part_root = view.findViewById(R.id.constraint_part_root);
             View view_focus = view.findViewById(R.id.focus_view);
             constraint_part_root.setFocusable(true);
-            view.setNextFocusRightId(R.id.rcv_setting_org_list);
+            constraint_part_root.setNextFocusRightId(R.id.iv_arrow_part);
+            constraint_part_root.setNextFocusLeftId(R.id.tv_title_item_group);
             ImageView iv_arrow = view.findViewById(R.id.iv_arrow_part);
+            view_focus.setNextFocusRightId(R.id.focus_view);
             ImageView iv_state_company = view.findViewById(R.id.iv_state_company);
             iv_state_company.setImageResource(model.isAllChooseGroup()?R.drawable.icon_item_square_state_checked:R.drawable.icon_item_square_state_unchecked);
             view_focus.setOnClickListener(v -> {
@@ -480,7 +491,7 @@ public class InvitePersonPopupWindow extends BasePopupWindow implements InvitePe
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, UIUtils.dip2px(30));
             ConstraintLayout constraint_part_root = view.findViewById(R.id.constraint_part_root);
             constraint_part_root.setFocusable(true);
-                view.setNextFocusRightId(R.id.rcv_setting_org_list);
+            view.setNextFocusRightId(R.id.rcv_setting_org_list);
             constraint_part_root.setOnClickListener(v -> {
                 isCheck = false;
 //                cb_second_head.setChecked(isCheck);

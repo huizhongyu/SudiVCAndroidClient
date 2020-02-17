@@ -223,8 +223,7 @@ public class UserCMD {
         params.put("token", token);
         params.put("mac", SystemUtil.getMacAddress());
         params.put("deviceVersion", BuildConfig.VERSION_NAME);
-//        params.put("serialNumber", !TextUtils.isEmpty(SystemUtil.getSerial()) ? SystemUtil.getSerial() : "");
-        params.put("serialNumber", SPEditor.instance().getAccount());
+        params.put("serialNumber", !TextUtils.isEmpty(SystemUtil.getSerial()) ? SystemUtil.getSerial() : "");
         params.put("forceLogin", forceLogin);
         params.put("accessType", "terminal");
         if (SystemUtil.getSystemModel().equals("C9Z")) {

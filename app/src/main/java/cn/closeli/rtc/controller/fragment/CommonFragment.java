@@ -59,6 +59,8 @@ public class CommonFragment extends Fragment implements CustomAdapt, View.OnClic
     private RadioButton rv_audio_in_mic;
     private RadioGroup rg_audio_out;
     private RadioButton rv_audio_out_hdmi1;
+    private RadioButton rv_audio_out_hdmi2;
+    private RadioButton rv_audio_out_lineout;
     private RadioButton rv_audio_out_usb;
     private RadioGroup rg_setting_second_screen;
     private RadioButton rb_setting_second_main;
@@ -86,6 +88,8 @@ public class CommonFragment extends Fragment implements CustomAdapt, View.OnClic
         rb_setting_focus_auto = view.findViewById(R.id.rb_setting_focus_auto);
         rv_audio_in_linein = view.findViewById(R.id.rv_audio_in_linein);
         rv_audio_out_hdmi1 = view.findViewById(R.id.rv_audio_out_hdmi1);
+        rv_audio_out_hdmi2 = view.findViewById(R.id.rv_audio_out_hdmi2);
+        rv_audio_out_lineout = view.findViewById(R.id.rv_audio_out_lineout);
         rb_setting_focus_hand = view.findViewById(R.id.rb_setting_focus_hand);
         rv_audio_in_mic = view.findViewById(R.id.rv_audio_in_mic);
         rv_audio_out_usb = view.findViewById(R.id.rv_audio_out_usb);
@@ -115,6 +119,10 @@ public class CommonFragment extends Fragment implements CustomAdapt, View.OnClic
         rv_audio_in_linein.setNextFocusLeftId(((SettingsActivity) getActivity()).getIdByPosition(0));
         rv_audio_in_mic.setNextFocusRightId(R.id.rv_audio_in_mic);
         rv_audio_out_hdmi1.setNextFocusLeftId(((SettingsActivity) getActivity()).getIdByPosition(0));
+        rv_audio_out_hdmi1.setNextFocusDownId(R.id.rv_audio_out_hdmi1);
+        rv_audio_out_hdmi2.setNextFocusDownId(R.id.rv_audio_out_hdmi2);
+        rv_audio_out_lineout.setNextFocusDownId(R.id.rv_audio_out_lineout);
+        rv_audio_out_usb.setNextFocusDownId(R.id.rv_audio_out_usb);
         rv_audio_out_usb.setNextFocusRightId(R.id.rv_audio_out_usb);
         rb_setting_second_main.setNextFocusLeftId(((SettingsActivity) getActivity()).getIdByPosition(0));
         rb_setting_second_sub.setNextFocusRightId(R.id.rb_setting_second_sub);
